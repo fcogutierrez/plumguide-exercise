@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlumGuide.PlutoRover.WebApi", "PlumGuide.PlutoRover.WebApi\PlumGuide.PlutoRover.WebApi.csproj", "{5A5FCE64-DE9A-4B47-92CA-CC45247F82BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlumGuide.Rover.WebApi", "PlumGuide.Rover.WebApi\PlumGuide.Rover.WebApi.csproj", "{5A5FCE64-DE9A-4B47-92CA-CC45247F82BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
