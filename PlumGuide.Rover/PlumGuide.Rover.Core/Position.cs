@@ -13,9 +13,6 @@
             {
                 throw new ArgumentOutOfRangeException(nameof(y));
             }
-
-            X = x;
-            Y = y;
         }
 
         public int X { get; }
