@@ -6,6 +6,10 @@ namespace PlumGuide.Rover.Core
     {
         public Rover(Position position, Facing facing)
         {
+            if (position == null)
+            {
+                throw new ArgumentNullException(nameof(position));
+            }
         }
 
         public Position Position { get; }
