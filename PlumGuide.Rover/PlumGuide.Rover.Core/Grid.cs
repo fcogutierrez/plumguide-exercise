@@ -13,6 +13,9 @@
             {
                 throw new ArgumentOutOfRangeException(nameof(height));
             }
+
+            Width = width;
+            Height = height;
         }
 
         public int Width { get; }
