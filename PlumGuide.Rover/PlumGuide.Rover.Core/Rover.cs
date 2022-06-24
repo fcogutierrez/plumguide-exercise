@@ -17,5 +17,9 @@ namespace PlumGuide.Rover.Core
 
         public Position Position { get; }
         public Facing Facing { get; }
+
+        public void Move(Direction direction)
+        {
+        }
     }
 }

@@ -20,10 +20,5 @@
 
         public int Width { get; }
         public int Height { get; }
-
-        public bool CanMoveToPosition(Position position)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

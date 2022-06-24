@@ -6,7 +6,7 @@ namespace PlumGuide.Rover.Core.Tests.PositionTests
     public sealed class ConstructorTests
     {
         [Theory]
-        [InlineData(5, -5)]        
+        [InlineData(5, -5)]     
         [InlineData(-10, 10)]
         [InlineData(-10, -5)]
 
@@ -20,10 +20,10 @@ namespace PlumGuide.Rover.Core.Tests.PositionTests
         [Fact]
         public void Given_ValidCoordinates_Should_AssignValues()
         {
-            var position = new Position(10, 5);
+            var sut = new Position(10, 5);
 
-            position.X.Should().Be(10);
-            position.Y.Should().Be(5);
+            sut.X.Should().Be(10);
+            sut.Y.Should().Be(5);
         }
     }
 }

@@ -18,10 +18,10 @@ namespace PlumGuide.Rover.Core.Tests.RoverTests
         public void Given_PositionAndFacing_Should_AssignValues()
         {
             var position = new Position(20, 1);
-            var rover = new Rover(position, Facing.North);
+            var sut = new Rover(position, Facing.North);
 
-            rover.Facing.Should().Be(Facing.North);
-            rover.Position.Should().Be(new Position(20, 1));
+            sut.Facing.Should().Be(Facing.North);
+            sut.Position.Should().Be(new Position(20, 1));
         }
     }
 }

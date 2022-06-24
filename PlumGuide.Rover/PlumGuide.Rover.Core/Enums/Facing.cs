@@ -2,9 +2,9 @@
 {
     public enum Facing
     {
-        North = 0,
-        South = 1,
-        East = 2,
-        West = 3,
+        North = 1,
+        South = 2,
+        East = 3,
+        West = 4,
     }
 }
