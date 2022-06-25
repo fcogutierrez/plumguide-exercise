@@ -18,6 +18,11 @@ namespace PlumGuide.Rover.Core
         public Position Position { get; private set; }
         public Facing Facing { get; }
 
+        public void MoveForward()
+        {
+
+        }
+
         public void Move(Direction direction)
         {
             var newX = Position.X;
