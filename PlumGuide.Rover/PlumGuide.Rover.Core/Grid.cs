@@ -18,6 +18,7 @@ namespace PlumGuide.Rover.Core
 
             Width = width;
             Height = height;
+            Rover = rover;
         }
 
         public int Width { get; }
