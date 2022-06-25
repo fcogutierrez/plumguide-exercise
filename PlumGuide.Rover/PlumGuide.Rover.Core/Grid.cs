@@ -1,6 +1,4 @@
-﻿using PlumGuide.Rover.Core.Enums;
-
-namespace PlumGuide.Rover.Core
+﻿namespace PlumGuide.Rover.Core
 {
     public sealed class Grid
     {
