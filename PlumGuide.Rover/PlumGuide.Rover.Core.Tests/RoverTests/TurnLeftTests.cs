@@ -11,7 +11,7 @@ namespace PlumGuide.Rover.Core.Tests.RoverTests
         [InlineData(Facing.West, Facing.South)]
         [InlineData(Facing.South, Facing.East)]
         [InlineData(Facing.East, Facing.North)]
-        public void Given_PositionAndFacing_Should_ChangeToTheCorrectFacingAndDoNotChangeThePosition(Facing initialFacing, Facing expectedFacing)
+        public void Given_PositionAndFacing_Should_ChangeToExpectedFacingAndDoNotChangePosition(Facing initialFacing, Facing expectedFacing)
         {
             var initialPosition = new Position(5, 5);
             var sut = new Rover(initialPosition, initialFacing);
