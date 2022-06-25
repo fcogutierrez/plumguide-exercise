@@ -67,5 +67,10 @@ namespace PlumGuide.Rover.Core
             var newPosition = new Position(newX, newY);
             Position = newPosition;
         }
+
+        public void TurnRight()
+        {
+
+        }
     }
 }
