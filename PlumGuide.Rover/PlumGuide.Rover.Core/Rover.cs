@@ -16,7 +16,7 @@ namespace PlumGuide.Rover.Core
         }
 
         public Position Position { get; private set; }
-        public Facing Facing { get; }
+        public Facing Facing { get; private set; }
 
         public void MoveForward()
         {
@@ -70,7 +70,21 @@ namespace PlumGuide.Rover.Core
 
         public void TurnRight()
         {
-
+            switch (Facing)
+            {
+                case Facing.North:
+                    Facing = Facing.East;
+                    break;
+                case Facing.East:
+                    Facing = Facing.South;
+                    break;
+                case Facing.South:
+                    Facing = Facing.West;
+                    break;
+                case Facing.West:
+                    Facing = Facing.North;
+                    break;
+            }
         }
     }
 }
