@@ -14,21 +14,30 @@
                 throw new ArgumentOutOfRangeException(nameof(height));
             }
 
-            if (rover.Position.X < 0 || 
-                rover.Position.X > width - 1 ||
-                rover.Position.Y < 0 ||
-                rover.Position.Y > height - 1)
-            {
-                throw new ArgumentException(nameof(rover));
-            }
-
             Width = width;
             Height = height;
+
+            if (!IsValidPosition(rover.Position))
+            {
+                throw new ArgumentException("The Rover's position is not supported", nameof(rover));
+            }
+
             Rover = rover;
         }
 
         public int Width { get; }
         public int Height { get; }
         public Rover Rover { get; }
+
+        private bool IsValidPosition(Position position)
+        {
+            var result =
+                position.X >= 0 &&
+                position.X < Width &&
+                position.Y >= 0 &&
+                position.Y < Height;
+
+            return result;
+        }
     }
 }
