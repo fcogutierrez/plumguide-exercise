@@ -92,5 +92,10 @@ namespace PlumGuide.Rover.Core
                     throw new InvalidOperationException();
             }
         }
+
+        public void TurnLeft()
+        {
+
+        }
     }
 }
