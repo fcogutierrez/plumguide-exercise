@@ -16,7 +16,7 @@ namespace PlumGuide.Rover.Core.Tests.RoverTests
             var initialPosition = new Position(5, 5);
             var sut = new Rover(initialPosition, initialFacing);
 
-            sut.TurnRight();
+            sut.TurnLeft();
 
             sut.Position.Should().Be(initialPosition);
             sut.Facing.Should().Be(expectedFacing);

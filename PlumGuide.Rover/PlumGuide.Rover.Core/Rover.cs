@@ -95,7 +95,23 @@ namespace PlumGuide.Rover.Core
 
         public void TurnLeft()
         {
-
+            switch (Facing)
+            {
+                case Facing.North:
+                    Facing = Facing.West;
+                    break;
+                case Facing.West:
+                    Facing = Facing.South;
+                    break;
+                case Facing.South:
+                    Facing = Facing.East;
+                    break;
+                case Facing.East:
+                    Facing = Facing.North;
+                    break;
+                default:
+                    throw new InvalidOperationException();
+            }
         }
     }
 }
