@@ -20,11 +20,24 @@ namespace PlumGuide.Rover.Core.Tests.GridTests
             expectedException.Should().BeAssignableTo<ArgumentOutOfRangeException>();
         }
 
+        [Theory]
+        [InlineData(-1, 5)]
+        [InlineData(50, 5)]
+        [InlineData(5, -1)]
+        [InlineData(5, 101)]
+        public void Given_GridWithRoverInInvalidPosition_Should_ThrowAnArgumentException(int roverPositionX, int roverPositionY)
+        {
+            var rover = new Rover(new Position(roverPositionX, roverPositionY), Facing.North);
+            var expectedException = Record.Exception(() => new Grid(50, 100, rover));
+
+            expectedException.Should().BeAssignableTo<ArgumentException>();
+        }
+
         [Fact]
         public void Given_ValidParameters_Should_AssignValues()
         {
             var rover = new Rover(new Position(10, 10), Facing.North);
-            var grid = new Grid(100, 50, rover);
+            var grid = new Grid(100, 100, rover);
 
             grid.Width.Should().Be(100);
             grid.Height.Should().Be(50);
