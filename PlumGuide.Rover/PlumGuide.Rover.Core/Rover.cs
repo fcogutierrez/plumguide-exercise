@@ -37,6 +37,8 @@ namespace PlumGuide.Rover.Core
                 case Facing.West:
                     newX = Position.X - 1;
                     break;
+                default:
+                    throw new InvalidOperationException();
             }
 
             var newPosition = new Position(newX, newY);
@@ -62,6 +64,8 @@ namespace PlumGuide.Rover.Core
                 case Facing.West:
                     newX = Position.X + 1;
                     break;
+                default:
+                    throw new InvalidOperationException();
             }
 
             var newPosition = new Position(newX, newY);
@@ -84,6 +88,8 @@ namespace PlumGuide.Rover.Core
                 case Facing.West:
                     Facing = Facing.North;
                     break;
+                default:
+                    throw new InvalidOperationException();
             }
         }
     }
