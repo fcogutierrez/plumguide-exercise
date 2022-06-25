@@ -40,7 +40,7 @@ namespace PlumGuide.Rover.Core.Tests.GridTests
             var grid = new Grid(100, 100, rover);
 
             grid.Width.Should().Be(100);
-            grid.Height.Should().Be(50);
+            grid.Height.Should().Be(100);
 
             grid.Rover.Position.Should().Be(new Position(10, 10));
             grid.Rover.Facing.Should().Be(Facing.North);

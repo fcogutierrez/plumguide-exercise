@@ -14,6 +14,14 @@
                 throw new ArgumentOutOfRangeException(nameof(height));
             }
 
+            if (rover.Position.X < 0 || 
+                rover.Position.X > width - 1 ||
+                rover.Position.Y < 0 ||
+                rover.Position.Y > height - 1)
+            {
+                throw new ArgumentException(nameof(rover));
+            }
+
             Width = width;
             Height = height;
             Rover = rover;
