@@ -78,6 +78,11 @@ namespace PlumGuide.Rover.Core
             return position;
         }
 
+        public Position GetPositionAfterMovingBackward()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TurnRight()
         {
             switch (Facing)
