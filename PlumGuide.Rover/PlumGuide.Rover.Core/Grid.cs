@@ -1,4 +1,6 @@
-﻿namespace PlumGuide.Rover.Core
+﻿using PlumGuide.Rover.Core.Exceptions;
+
+namespace PlumGuide.Rover.Core
 {
     public sealed class Grid
     {
@@ -31,7 +33,12 @@
 
         public void MoveRoverForward()
         {
-            
+            var nextPosition = Rover.GetPositionAfterMovingForward();
+
+            if (!IsValidPosition(nextPosition))
+            {
+                throw new MoveNotAllowedException();
+            }
         }
 
         private bool IsValidPosition(Position position)
