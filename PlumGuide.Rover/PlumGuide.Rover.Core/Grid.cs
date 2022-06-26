@@ -29,6 +29,11 @@
         public int Height { get; }
         public Rover Rover { get; }
 
+        public void MoveRoverForward()
+        {
+            
+        }
+
         private bool IsValidPosition(Position position)
         {
             var result =
