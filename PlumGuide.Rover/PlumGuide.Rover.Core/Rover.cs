@@ -26,28 +26,7 @@ namespace PlumGuide.Rover.Core
 
         public void MoveBackward()
         {
-            var newX = Position.X;
-            var newY = Position.Y;
-
-            switch (Facing)
-            {
-                case Facing.North:
-                    newY = Position.Y - 1;
-                    break;
-                case Facing.South:
-                    newY = Position.Y + 1;
-                    break;
-                case Facing.East:
-                    newX = Position.X - 1;
-                    break;
-                case Facing.West:
-                    newX = Position.X + 1;
-                    break;
-                default:
-                    throw new InvalidOperationException();
-            }
-
-            var newPosition = new Position(newX, newY);
+            var newPosition = GetPositionAfterMovingBackward();
             Position = newPosition;
         }
 
