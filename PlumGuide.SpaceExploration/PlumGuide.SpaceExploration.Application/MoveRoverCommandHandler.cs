@@ -19,6 +19,11 @@ namespace PlumGuide.SpaceExploration.Application
 
         public void Handle(MoveRoverCommand command)
         {
+            if (command is null)
+            {
+                throw new ArgumentNullException(nameof(command));
+            }
+
             foreach (var instruction in command.RoadMap)
             {
                 switch (instruction)
