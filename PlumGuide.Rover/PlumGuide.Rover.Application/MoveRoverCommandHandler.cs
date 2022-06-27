@@ -11,6 +11,8 @@ namespace PlumGuide.Rover.Application
             {
                 throw new ArgumentNullException(nameof(grid));
             }
+
+            Grid = grid;
         }
 
         public Grid Grid { get; }
