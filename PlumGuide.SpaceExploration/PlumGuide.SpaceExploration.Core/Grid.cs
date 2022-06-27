@@ -29,7 +29,7 @@ namespace PlumGuide.SpaceExploration.Core
 
         public int Width { get; }
         public int Height { get; }
-        public SpaceExploration.Core.Rover Rover { get; }
+        public Rover Rover { get; }
 
         public void MoveRoverForward()
         {
