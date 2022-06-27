@@ -19,3 +19,5 @@ This application layer has been created in order to isolate the translation of t
 ## Remarks
 
 This exercise has been resolved by using TDD approach, so it is recommended to check unit tests to have a clearer picture of the implementation details.
+
+**NOTE**: please find in the *Architectural Design.pdf* file the solution of the second part of this exercise. 
