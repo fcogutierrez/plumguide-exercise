@@ -13,5 +13,13 @@ namespace PlumGuide.Rover.Application.Tests.CommandTests
 
             expectedException.Should().BeAssignableTo<ArgumentNullException>();
         }
+
+        [Fact]
+        public void Given_RoadMap_Should_AssignIt()
+        {
+            var sut = new MoveRoverCommand("ABC");
+
+            sut.RoadMap.Should().Be("ABC");
+        }
     }
 }
