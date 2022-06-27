@@ -20,6 +20,6 @@ This application layer has been created in order to isolate the translation of t
 
 This exercise has been resolved by using TDD approach, so it is recommended to check unit tests to have a clearer picture of the implementation details.
 
-In the most of the micro-commits I have performed, I have used the `RED`/`GREEN`/`REFACTOR` suffixes in order to highlight each TDD required step.
+In the most of the performed micro-commits, I have used the `RED`/`GREEN`/`REFACTOR` suffixes in order to highlight each TDD required step.
 
 **NOTE**: please find in the *Architectural Design.pdf* file the solution of the second part of this exercise. 
