@@ -8,6 +8,19 @@ namespace PlumGuide.SpaceExploration.Application.Tests.MoveRoverCommandHandlerTe
 {
     public sealed class HandleTests
     {
+        [Fact]
+        public void Given_MissingCommand_Should_ThrowAnArgumentNullException()
+        {
+            var rover = new Rover(new Position(0,0), Facing.North);
+            var grid = new Grid(50, 50, rover);
+
+            var sut = new MoveRoverCommandHandler(grid);
+
+            var expectedException = Record.Exception(() => sut.Handle(default));
+
+            expectedException.Should().BeAssignableTo<ArgumentNullException>();
+        }
+
         [Theory]
         [InlineData(0, 0, Facing.North, "FFRFF", 2, 2, Facing.East)]
         [InlineData(0, 0, Facing.North, "FRFLFF", 1, 3, Facing.North)]
