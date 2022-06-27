@@ -21,5 +21,16 @@ namespace PlumGuide.Rover.Core.Tests.GridTests
 
             expectedException.Should().BeAssignableTo<MoveNotAllowedException>();
         }
+
+        [Fact]
+        public void Given_RoverInAValidPosition_Should_ProcessTheMoveIfTheNewPositionIsAllowed()
+        {
+            var rover = new Rover(new Position(25, 25), Facing.North);
+            var grid = new Grid(50, 50, rover);
+
+            grid.MoveRoverBackward();
+
+            grid.Rover.Position.Should().NotBe(new Position(25, 25));
+        }
     }
 }
