@@ -17,7 +17,7 @@ namespace PlumGuide.Rover.Core.Tests.GridTests
             var rover = new Rover(new Position(currentX, currentY), facing);
             var grid = new Grid(50, 50, rover);
 
-            var expectedException = Record.Exception(() => grid.MoveRoverForward());
+            var expectedException = Record.Exception(() => grid.MoveRoverBackward());
 
             expectedException.Should().BeAssignableTo<MoveNotAllowedException>();
         }
