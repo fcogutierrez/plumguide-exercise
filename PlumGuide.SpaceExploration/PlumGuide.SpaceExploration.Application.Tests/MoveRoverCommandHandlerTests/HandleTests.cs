@@ -25,6 +25,8 @@ namespace PlumGuide.SpaceExploration.Application.Tests.MoveRoverCommandHandlerTe
         [InlineData(0, 0, Facing.North, "FFRFF", 2, 2, Facing.East)]
         [InlineData(0, 0, Facing.North, "FRFLFF", 1, 3, Facing.North)]
         [InlineData(0, 0, Facing.North, "RRR", 0, 0, Facing.West)]
+        [InlineData(25, 25, Facing.East, "BBBLFFRFFL", 24, 27, Facing.North)]
+        [InlineData(14, 20, Facing.South, "FFRBBLBBRF", 15, 20, Facing.West)]
         public void Given_CommandWithValidRoadMapInstructions_Should_MoveRoverToTheExpectedPositionAndFacing(int initialX, int initialY, Facing initialFacing, string roadMap, int expectedX, int expectedY, Facing expectedFacing)
         {
             var initialPosition = new Position(initialX, initialY);
