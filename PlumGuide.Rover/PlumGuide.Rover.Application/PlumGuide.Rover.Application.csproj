@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PlumGuide.Rover.Core\PlumGuide.Rover.Core.csproj" />
+  </ItemGroup>
+
 </Project>
