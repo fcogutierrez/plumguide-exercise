@@ -57,12 +57,12 @@ namespace PlumGuide.Rover.Core
 
         public void TurnRoverRight()
         {
-
+            Rover.TurnRight();
         }
 
         public void TurnRoverLeft()
         {
-
+            Rover.TurnLeft();
         }
 
         private bool IsValidPosition(Position position)
