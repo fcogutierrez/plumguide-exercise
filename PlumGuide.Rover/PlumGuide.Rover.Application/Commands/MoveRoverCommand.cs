@@ -4,7 +4,10 @@
     {
         public MoveRoverCommand(string roadMap)
         {
-            
+            if (string.IsNullOrWhiteSpace(roadMap))
+            {
+                throw new ArgumentNullException(nameof(roadMap));
+            }
         }
 
         public string RoadMap { get; }
