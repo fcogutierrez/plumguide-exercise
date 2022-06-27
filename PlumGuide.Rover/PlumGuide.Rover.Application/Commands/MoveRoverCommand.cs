@@ -8,6 +8,8 @@
             {
                 throw new ArgumentNullException(nameof(roadMap));
             }
+
+            RoadMap = roadMap;
         }
 
         public string RoadMap { get; }
