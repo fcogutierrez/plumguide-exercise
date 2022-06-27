@@ -1,4 +1,6 @@
 ﻿using FluentAssertions;
+using PlumGuide.Rover.Core;
+using PlumGuide.Rover.Core.Enums;
 using Xunit;
 
 namespace PlumGuide.Rover.Application.Tests.MoveRoverCommandHandlerTests
@@ -11,6 +13,20 @@ namespace PlumGuide.Rover.Application.Tests.MoveRoverCommandHandlerTests
             var expectedException = Record.Exception(() => new MoveRoverCommandHandler(default));
 
             expectedException.Should().BeAssignableTo<ArgumentNullException>();
+        }
+
+        [Fact]
+        public void Given_Grid_Should_AssignIt()
+        {
+            var rover = new Core.Rover(new Position(0, 5), Facing.North);
+            var grid = new Grid(50, 100, rover);
+
+            var sut = new MoveRoverCommandHandler(grid);
+
+            sut.Grid.Width.Should().Be(50);
+            sut.Grid.Height.Should().Be(100);
+            sut.Grid.Rover.Facing.Should().Be(Facing.North);
+            sut.Grid.Rover.Position.Should().Be(new Position(0, 5));
         }
     }
 }
