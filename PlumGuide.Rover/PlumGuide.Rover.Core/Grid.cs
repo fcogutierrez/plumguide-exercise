@@ -51,6 +51,8 @@ namespace PlumGuide.Rover.Core
             {
                 throw new MoveNotAllowedException();
             }
+
+            Rover.MoveBackward();
         }
 
         private bool IsValidPosition(Position position)
