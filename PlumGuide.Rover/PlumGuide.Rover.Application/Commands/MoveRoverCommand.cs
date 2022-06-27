@@ -2,6 +2,11 @@
 {
     public class MoveRoverCommand
     {
-        public string RoadMap { get; set; }
+        public MoveRoverCommand(string roadMap)
+        {
+            
+        }
+
+        public string RoadMap { get; }
     }
 }
