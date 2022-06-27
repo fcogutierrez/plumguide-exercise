@@ -19,7 +19,24 @@ namespace PlumGuide.Rover.Application
 
         public void Handle(MoveRoverCommand command)
         {
-
+            foreach (var instruction in command.RoadMap)
+            {
+                switch (instruction)
+                {
+                    case 'F':
+                        Grid.Rover.MoveForward();
+                        break;
+                    case 'B':
+                        Grid.Rover.MoveBackward();
+                        break;
+                    case 'L':
+                        Grid.Rover.TurnLeft();
+                        break;
+                    case 'R':
+                        Grid.Rover.TurnRight();
+                        break;
+                }
+            }
         }
     }
 }
