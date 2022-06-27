@@ -7,7 +7,10 @@ namespace PlumGuide.Rover.Application
     {
         public MoveRoverCommandHandler(Grid grid)
         {
-            
+            if (grid is null)
+            {
+                throw new ArgumentNullException(nameof(grid));
+            }
         }
 
         public Grid Grid { get; }
