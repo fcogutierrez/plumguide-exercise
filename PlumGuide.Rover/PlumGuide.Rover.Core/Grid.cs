@@ -43,6 +43,11 @@ namespace PlumGuide.Rover.Core
             Rover.MoveForward();
         }
 
+        public void MoveRoverBackward()
+        {
+
+        }
+
         private bool IsValidPosition(Position position)
         {
             var result =
