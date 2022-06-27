@@ -35,6 +35,8 @@ namespace PlumGuide.Rover.Application
                     case 'R':
                         Grid.Rover.TurnRight();
                         break;
+                    default:
+                        throw new NotSupportedException($"The introduced instruction {instruction} is not supported");
                 }
             }
         }
